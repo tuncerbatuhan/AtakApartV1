@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #c1a843;
+  overflow-x: hidden;
+}
+
+.flipbook {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 5 / 3;
+}
+
+.flipbook .hard {
+  background: #046171 !important;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.flipbook .hard small {
+  font-style: italic;
+  font-weight: lighter;
+  opacity: 0.6;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.flipbook .page {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.page img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: contain;
+  height: auto;
+}
+
+.flipbook .page small {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+   background-color: rgb(23, 147, 213);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .flipbook {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .page img {
+    width: 90%;
+  }
+
+  .flipbook .hard small,
+  .flipbook .page small {
+    font-size: 12px;
+  }
+}

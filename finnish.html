@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FINNISH MENU</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="turn.js"></script>
+</head>
+
+<body>
+  <div class="flipbook" >
+    <div class="hard"></div>
+
+        <div class="hard">ATAK APART HOTEL <small>~ RUOKALISTA ~</small>
+            <div>
+                <a href="english.html" class="button">ENGLISH</a>
+                <a  href="beverages.html" class="button">BEVERAGES</a>
+            </div>
+        </div>
+
+
+    <div class="page"><img src="./finnish/1.png" alt="Page 1" /></div>
+    <div class="page"><img src="./finnish/2.png" alt="Page 2" /></div>
+    <div class="page"><img src="./finnish/3.png" alt="Page 3" /></div>
+    <div class="page"><img src="./finnish/4.png" alt="Page 4" /></div>
+    <div class="page"><img src="./finnish/5.png" alt="Page 5" /></div>
+    <div class="page"><img src="./finnish/6.png" alt="Page 6" /></div>
+    <div class="page"><img src="./finnish/7.png" alt="Page 7" /></div>
+    <div class="page"><img src="./finnish/8.png" alt="Page 8" /></div>
+    <div class="page"><img src="./finnish/9.png" alt="Page 9" /></div>
+    <div class="page"><img src="./finnish/10.png" alt="Page 10" /></div>
+    <div class="page"><img src="./finnish/11.png" alt="Page 11" /></div>
+    <div class="page"><img src="./finnish/12.png" alt="Page 12" /></div>
+    <div class="page"><img src="./finnish/13.png" alt="Page 13" /></div>
+    <div class="page"><img src="./finnish/14.png" alt="Page 14" /></div>
+
+  
+    <div class="hard">Kiitos <small>~ ATAK APART HOTEL ~</small></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+  $('.flipbook').turn({
+    width: window.innerWidth > 768 ? 1000 : 320,
+    height: window.innerWidth > 768 ? 600 : 480,
+    autoCenter: true,
+  });
+
+
+  $('.flipbook').bind('turned', function(event, page, view) {
+    let bgColor;
+    switch(page) {
+      case 1:
+        bgColor = '#c1a843'; 
+        break;
+      case 18:
+        bgColor = '#c1a843'; 
+        break;
+
+      default:
+        bgColor = '#046171'; 
+        break;
+    }
+    $('.flipbook').css('background-color', bgColor);
+  });
+});
+  </script>
+</body>
+</html>
